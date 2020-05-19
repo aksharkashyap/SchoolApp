@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+ 
+    <head>
+       <!-- <script> require('./app.js')</script> -->
+        <title>Bahu Hir Secondary School Nagoi</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <script src="./node_modules/jquery/dist/jquery.js"></script>
+        <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/homeFunctions.js"></script>
+        <script src="./js/clock.js"></script>
+        <script src="./js/date.js"></script>
+        <link rel="stylesheet" href="css/clock.css">
+        
+        
+    </head>
+ 
+  <body onload="startTime()">
+    <!--School logo,date,clock-->
+    <img  src="images/schoolTitle.png" class="responsive"/>
+    <img  width="80px" height="90px" src="images/schoolLogo.png" class="responsiveLogo"/>
+    <div style="display:inline; color:#993300; font-size:30px;" class="responsivetxt">
+           <script language="JavaScript" type="text/javascript">
+                document.write(TODAY);
+            </script></div>
+    
+    <div class="clockCss"id="txt"></div>        
+    <!----------------------------->
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+          <!-- Brand/logo -->
+          <a class="navbar-brand" href="#">BHSSN</a> 
+          <!-- Links -->
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="./html/student.html">STUDENT</a></li>
+            <li class="nav-item"></li><a class="nav-link" href="./html/teacher.html">TEACHER</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">ACCOUNTS</a></li>
+          </ul>
+    </nav>
+        
+    <div class="container-fluid">
+        <button class="button" value="Student" onclick="window.location.href='./html/student.html'">
+                    <span>Student<img src= "images/studentlogo.png"/></span></button>    
+
+        <button class="button" value="Teacher" onclick="window.location.href='./html/teacher.html'">
+                    <span>Teacher<img src= "images/teacher.png"/></span></button>    
+
+        <button class="button" value="Accounts" onclick="window.location.href='#'">
+                <span>Accounts<img src= "images/accountslogo.png"/></span></button> 
+                
+        <button class="button" value="TTable" onclick="">
+                <span>TimeTable<img src= "images/timetable.png"/></span></button>    
+                    
+        <button class="button" value="contacts" onclick="">
+                <span>Contacts<img src= "images/contacts.png"/></span></button>  
+                
+        <button class="button" value="notepad" onclick="">
+                <span>Notepad<img src= "images/notepad.png"/></span></button> 
+                
+        <button class="button" value="calculator" onclick="">
+                <span>Calculator<img src= "images/calculator.png"/></span></button> 
+
+        <button class="button" value="locker" onclick="">
+                 <span>Locker<img src= "images/locker.png"/></span></button> 
+
+        <button class="button" value="Gmail" onclick="gmalFunc()">
+                <span>G Mail&nbsp;<img src= "images/gmail.png"/></span></button>  
+        <!--
+        <button class="button" value="Facebook" onclick="fbFunc()">
+                <span>Facebook<img src= "images/facebook.png"/></span></button> -->   
+
+        <button class="button" value="Youtube" onclick="youtubeFunc()">
+                <span>Youtube<img src= "images/youtube.png"/></span></button>   
+                
+        <button class="button" value="GDrive" onclick="driveFunc()">
+                <span>Google Drive<img src= "images/gdrive.png"/></span></button>          
+        
+        <button class="button" value="TTable" onclick="">
+                <span><font size="5">Exam Time Table</font><img src= "images/etimetable.png"/></span></button>    
+    </div>
+
+
+    <script type="text/javascript">
+        var remote = require('electron').remote;
+        document.addEventListener('keydown', function (e) {
+          if (e.which === 123) {
+            remote.getCurrentWindow().webContents.openDevTools();
+          } else if (e.which === 116) {
+            location.reload();
+          }
+        });
+      </script>
+  
+
+ 
+    
+</body>
+</html>
