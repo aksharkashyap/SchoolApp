@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+ 
+
+
+    <head>
+       <!-- <script> require('./app.js')</script> -->
+
+        <title>BHSSN - TEACHER</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/responsive.css">
+        
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+        <link rel="stylesheet" href="../css/teacherStyle.css">
+        <link rel="stylesheet" href="../css/clock.css">  
+        <script src="../js/clock.js"></script>
+        <script src="../js/date.js"></script>
+
+    </head>
+ 
+  <body onload="startTime()">
+        
+   <!--School logo,date,clock-->
+   <img src="../images/schoolTitle.png" class="responsive"/>
+   <img width="80px" height="90px" src="../images/schoolLogo.png" class="responsiveLogo"/>  
+   <div style="display:inline; color:#993300; font-size:30px;" class="responsivetxt">
+          <script language="JavaScript" type="text/javascript">
+               document.write(TODAY);
+           </script></div>
+    <div class="clockCss"id="txt"></div>    
+   <!----------------------------->
+        
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+          <!-- Brand/logo -->
+          <a class="navbar-brand" href="../index.html">HOME</a> 
+          <!-- Links -->
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="./student.html">STUDENT</a></li>
+            <li class="nav-item"></li><a class="nav-link" href="#">TEACHER</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">ACCOUNTS</a></li>
+          </ul>
+    </nav>
+        
+    <div class="container-fluid">
+        <button class="button" value="addTeacher" onclick="window.location.href='./addTeacher.html'">
+                    <span>Add <br>Teacher<img src= "../images/addstudent.png"/></span></button>    
+
+        <button class="button" value="delTeacher" onclick="window.location.href='./deleteTeacher.html'">
+                    <span>Delete<br>Teacher<img src= "../images/delstudent.png"/></span></button> 
+
+        <button class="button" value="updateTeacher" onclick="window.location.href='./updateTeacher.html'">
+                     <span>Update<br> Teacher<img src= "../images/updatestudent.png"/></span></button> 
+        
+        <button class="button" value="teacherList" onclick="window.location.href='./display_TeacherList.html'">
+                    <span>Generate<br>TeacherList<img src= "../images/teacherListGen.png"/></span></button>   
+
+        <button class="button" value="printTeacher" onclick="window.location.href='./printTeacher.html'">
+                <span>Print <br>Teacher<img src= "../images/printStudent.png"/></span></button>    
+        
+        <button class="buttonTeaching" value="teachingSubjects" onclick="window.location.href='#'">
+                <span>Update Teaching Subjects<img src= "../images/teachingSubjects.png"/></span></button>  
+       
+        <button class="buttonTeaching" value="extndAcadYear" onclick="">
+                <span style="font-size:24px;">Extend<Br> Academic Year<img src= "../images/extndAcadYear.png"/></span></button> 
+                                       
+        <button class="button2" value="iCard" onclick="">
+                <span style="font-size:25px;">ID<br> Card<img src= "../images/idcardlogo.png"/></span></button> 
+                  
+         <button class="buttonTeaching" value="salDetails" onclick="">
+                <span style="font-size:24px;">Salary<Br> Details<img src= "../images/salDetails.png"/></span></button>        
+         
+         <button class="buttonTeaching" value="salUpdate" onclick="">
+                <span style="font-size:24px;">Salary<br> Update<img src= "../images/salUpdate.png"/></span></button>                
+        
+    </div>
+
+
+  
+  
+</html>

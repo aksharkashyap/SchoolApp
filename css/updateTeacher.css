@@ -1,0 +1,61 @@
+.invisible {
+    visibility: hidden;
+    display: inline;
+  }
+  
+  input[type="button_updtTeach"] {
+    margin-bottom: 0;
+  }
+  
+  .button,button,
+  input[type="button_updtTeach"] {
+    display: inline-block;
+    height: 38px;
+    width: 10vmax;
+    /*padding: 0px 30px;*/
+    color: rgb(185, 55, 55);
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid #bbb;
+    cursor: pointer;
+    box-sizing: border-box; }
+  .button:hover,
+  button:hover,
+  input[type="button_updtTeach"]:hover,
+  .button:focus,
+  button:focus,
+  input[type="button_updtTeach"]:focus {
+    color: rgb(100, 129, 209);
+    border-color: #888;
+    outline: 0; }
+  .button.button-primary,
+  button.button-primary,
+  input[type="button_updtTeach"].button-primary {
+    color: #FFF;
+    background-color: #33C3F0;
+    border-color: #33C3F0; }
+  .button.button-primary:hover,
+  button.button-primary:hover,
+  input[type="button_updtTeach"].button-primary:hover,
+  .button.button-primary:focus,
+  button.button-primary:focus,
+  input[type="button_updtTeach"].button-primary:focus {
+    color: #FFF;
+    background-color: #1EAEDB;
+    border-color: #1EAEDB; }
+  
+      /* Spacing
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  
+  input[type="txt_updtTeach"]{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;  }
+  

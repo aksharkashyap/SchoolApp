@@ -1,0 +1,12 @@
+.invisible {
+  visibility: hidden;
+  display: inline;
+}
+
+h3 {
+  margin-top: 2rem;
+}
+
+input[type="button"] {
+  margin-bottom: 0;
+}

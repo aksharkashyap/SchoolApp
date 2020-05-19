@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BHSSN - DELETE Teacher</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/responsive.css">
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="../node_modules/jquery-ui-dist/jquery-ui.js"></script>
+        <link rel="stylesheet" href="../node_modules/jquery-ui-dist/jquery-ui.css">
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="../css/updateTeacher.css">
+        <link rel="stylesheet" href="../css/addTeacher.css">
+        <script type="text/javascript" src="../js/autoComplete.js"></script>
+        <script type="text/javascript" src="../js/autoCompJoiningPost.js"></script>
+        <script type="text/javascript" src="../js/deleteTeacher_disp.js"></script>
+        <script type="text/javascript" src="../js/deleteTeacherRetrieve.js"></script>
+        
+        
+        <script src="../node_modules/sweetalert/dist/sweetalert.min.js"></script>
+        <link rel="stylesheet" href="../css/clock.css">  
+        <script src="../js/clock.js"></script>
+        <script src="../js/date.js"></script>
+        
+
+        <!--DateTimePicker-->
+        <script src="../node_modules/pickadate/lib/picker.js"></script>
+        <script src="../node_modules/pickadate/lib/picker.date.js"></script>
+        <script src="../node_modules/pickadate/lib/picker.time.js"></script>
+        <script src="../node_modules/pickadate/lib/legacy.js"></script>
+        <link rel="stylesheet" href="../node_modules/pickadate/lib/themes/default.css">
+        <link rel="stylesheet" href="../node_modules/pickadate/lib/themes/default.date.css">
+        <link rel="stylesheet" href="../node_modules/pickadate/lib/themes/default.time.css">
+
+        <!----yearpicker------>
+        <link rel="stylesheet" href="../css/StudTeach_yearpicker.css">
+        <script src="../assets/YearPicker/yearpicker.js" async></script>
+ 
+        
+      
+    </head>
+    
+  <body onload="startTime()">
+        
+   <!--School logo,date,clock-->
+   <img src="../images/schoolTitle.png" class="responsive"/>
+   <img width="80px" height="90px" src="../images/schoolLogo.png" class="responsiveLogo"/>  
+   <div style="display:inline; color:#993300; font-size:30px;" class="responsivetxt">
+          <script language="JavaScript" type="text/javascript">
+               document.write(TODAY);
+           </script></div>
+    <div class="clockCss"id="txt"></div>    
+   <!----------------------------->
+    
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+          <a class="navbar-brand" href="../index.html">HOME</a> 
+          <!-- Links -->
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="./student.html">STUDENT</a></li>
+            <li class="nav-item"></li><a class="nav-link" href="./teacher.html">TEACHER</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">ACCOUNTS</a></li>
+          </ul>
+    </nav>
+    
+    <div class="container-fluid">
+     <!--Show -->
+         <input type="txt_updtTeach" id="updt_ShowTeach" placeholder="Enter ID">
+         <label for="showTeach" class="invisible">x</label>
+         <button type="button_updtTeach" class="button-primary" onclick = "showTeacher()"value="ShowTeach" id="showTeach">Show</button>
+     <!--------->
+    <div span class="studBorder" id = "TeachBorder" style = "visibility:hidden">
+      <!---Background-->
+        <div style="background-image: url(../images/pass.jpg)"> 
+      <!---->
+    
+    <table>
+    <tr>
+   <td>&nbsp;<label id="label" for="firstname">First Name:</label>
+   <td><input disabled type="text"  id="firstname" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+   <td><label id="label" for="lastname">Last Name:</label>  </td> 
+   <td><input disabled type="text"  id="lastname" /></td> 
+    
+    <!--Image Preview-->
+    <td rowspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img id="imgID_T" style="display:none" width="125px" height="150px" alt="Photo Preview"/></td>
+    <!--------------->
+  </tr>
+  <tr>
+   <td>&nbsp;<label id="label" for="fathername">Father's Name:</label></td> 
+   <td><input disabled type="text"  id="fathername" /></td>
+   <td><label id="label" for="mothername">Mother's Name:</label></td> 
+   <td><input disabled type="text"  id="mothername" /></td>
+
+ 
+   
+  </tr>
+  <tr> 
+    <!------DOB--------->
+   <td>&nbsp;<label id="label" for="dob">DOB(DD-MM-YYYY):</label></td>
+   <td><input disabled type="text" id="dob"/></td>
+   <!------Academic Year--------->
+    <td><label id="label" for="acad_year">Academic Year:</label></td> 
+    <td><input disabled class = "yearpicker" type="number" id="acad_year"/></td>
+   
+  </tr> 
+  <tr> 
+    <!------नियुक्ति तिथि --------->
+    <td>&nbsp;<label id="label" for="joining_date">नियुक्ति तिथि:</label></td>
+    <td><input disabled type="text" id="joining_date" /></td> 
+
+     <!------नियुक्ति क्रमांक  --------->
+     <td><label id="label" for="joining_num">नियुक्ति क्रमांक:</label></td>
+     <td><input disabled type="text" id="joining_num"/></td>
+ <!--Sign Preview-->
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img id="signImgID_T" style="display:none" width="130px" height="50px" alt="Sign Preview"/></td>
+<!--------------->
+  </tr> 
+  <tr>
+     <!----नियुक्ति पद --------->
+    <td>&nbsp;<label id="label" for="joining_post">नियुक्ति पद:</label></td>
+    <td><input disabled type="text" id="joining_post" /></td>
+
+     <!------वर्तमान पद --------->
+     <td><label id="label" for="current_post">वर्तमान पद:</label></td>
+     <td><input disabled type="text" id="current_post" /></td>
+  </tr>
+      <!----Address----------->
+    <td>&nbsp;<label id="label"  for="address">Address:</label></td>
+    <td><textarea  disabled type="text" id="address"  ></textarea></td>
+     <!----शिक्षण विषय----------->
+    <td><label id="label" for="teaching_subject">शिक्षण विषय:</label></td>
+    <td> <input disabled type="text" id="teaching_subject" /></td>
+  </tr>
+  <tr> <!----Adhar Number----------->
+    <td>&nbsp;<label id="label" for="adhar">Adhar Number:</label></td>  
+    <td><input disabled type="number" id="adhar"/></td>
+    <!----Mobile Number----------->
+    <td><label id="label" for="mob">Mobile Number:</label></td>
+    <td><input disabled type="number" id="mob"/></td>
+     
+  </tr> 
+  <tr>  <!----Bank Account Number------>
+    <td>&nbsp;<label id="label" for="bank_acc">Bank Acc. Number :</label></td>
+    <td><input disabled type="number" id="bank_acc" placeholder="..."/></td>
+      <!---Bank Branch---------->
+    <td><label id="label" for="bank_branch">Bank Branch:</label></td>
+    <td><input disabled type="text" id="bank_branch"/></td>
+    <br>
+ </tr>
+ <tr> <!--योग्यता-->
+    <td>&nbsp;<label id="labelQualfcn" for="qualification">योग्यता:</label></td>
+ </tr>
+ <tr>
+    <td>&nbsp;<label id="label" for="qualification">12 वी:</label></td>
+    <td><div style = "color:#f5f3f7">
+    <input disabled type="radio" id="qlfcn_maths" name="qualification" value="MATHS"> Maths
+    <input disabled type="radio" id="qlfcn_bio" name="qualification" value="BIOLOGY"> Biology
+    <input disabled type="radio" id="qlfcn_humanities" name="qualification" value="HUMANITIES"> Humanities
+    <input disabled type="radio" id="qlfcn_commerce" name="qualification" value="COMMERCE"> Commerce</div></td>
+    <!--स्नातक विषय -->
+    <td><label id="label" for="graduation">स्नातक विषय:</label></td>
+    <td colspan="2"><div style = "color:#f5f3f7">
+    <input disabled type="radio" id="grdn_none" name="graduation" value="NONE"> None
+    <input disabled type="radio" id="grdn_maths" name="graduation" value="MATHS"> Maths
+    <input disabled type="radio" id="grdn_bio" name="graduation" value="BIOLOGY"> Biology
+    <input disabled type="radio" id="grdn_humanities" name="graduation" value="HUMANITIES">Humanities
+    <input disabled type="radio" id="grdn_commerce" name="graduation" value="COMMERCE"> Commerce</div></td>
+ </tr>
+    <!--स्नातकोत्तर -->
+ <tr>
+    <td>&nbsp;<label id="label" for="postGraduatn">स्नातकोत्तर:</label></td>
+    <td colspan="1"><div style = "color:#f5f3f7">
+    <input disabled type="radio" id="postgrdn_no" name="postGraduatn" value="NA"> No
+    <input disabled type="radio" id="postgrdn_yes" name="postGraduatn" value="YES"> YES
+    <input disabled type="textSmall" id="postgrdn_inpt"  placeholder="(If Yes)"/></div></td>
+    <!--प्रशिक्षण -->
+    <td><label id="label" for="traning">प्रशिक्षण:</label></td>
+    <td colspan="5"><div style = "color:#f5f3f7">
+    <input disabled type="radio" id="traning_no" name="traning" value="NA" > No&nbsp;&nbsp;&nbsp;
+    <input disabled type="radio" id="traning_yes" name="traning" value="YES" > YES
+    <input disabled type="text" id="traning_inpt"  placeholder="(If Yes)"/></div></td>
+ </tr>
+ <tr>
+   <!--डिप्लोमा-->
+   <td>&nbsp;<label id="label" for="diploma">डिप्लोमा:</label></td>
+   <td><div style = "color:#f5f3f7">
+   <input disabled type="radio" id="diploma_no" name="diploma" value="NA" > No
+   <input disabled type="radio" id="diploma_yes" name="diploma" value="YES" > YES
+   <input disabled type="textSmall" id="diploma_inpt"  placeholder="(If Yes)"/></div></td>
+    <!--Gender-->
+    <td><label id="label" for="gender">Gender:</label></td>
+    <td><div style = "color:#f0e8f8">
+    <input disabled type="radio" id="gender_male" name="genderT" value="MALE"> Male &nbsp;&nbsp;&nbsp;
+    <input disabled type="radio" id="gender_female" name="genderT" value="FEMALE"> Female</div></td>
+ </tr>
+
+</table> 
+
+</div> 
+</div> 
+    <center>
+      <!-- Delete -->
+      <button style = "visibility:hidden" type="button" class="btn btn-success btn-lg custom" id="delButton_T" onclick="delTeacherFunc()">DELETE</button>
+      <!------------------> 
+    </center>  
+    </div>
+    </div>
+
+    <script type="text/javascript">
+        var remote = require('electron').remote;
+        document.addEventListener('keydown', function (e) {
+          if (e.which === 123) {
+            remote.getCurrentWindow().webContents.openDevTools();
+          } else if (e.which === 116) {
+            location.reload();
+          }
+        });
+    </script>
+
+  <script>
+  /*Date Picker widget */
+  $('#dob,#joining_date').pickadate({
+         selectYears: true,
+         selectMonths: true,
+         selectYears:80,
+         min: new Date(1950,1,1),
+         max: new Date(2025,1,1)
+       })   
+</script>     
+
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+input[type=text],input[type=number],textarea{
+    width: 20vw;
+    padding: 12px 20px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 2px solid #808080;
+    border-radius: 20px;
+    
+    
+  /* background-color: rgb(1, 5, 7);  
+     color: white */
+  }
+
+  select:focus,select{
+    width: 20vw;
+    height: 2vw;
+    padding: 12px 20px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 2px solid #808080;
+    
+  }
+
+  
+
+textarea:focus,input[type=text]:focus, input[type=number]:focus {
+    /*background-color: lightblue;
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid rgba(81, 203, 238, 1);
+    outline-color: aqua;
+    outline-style: inherit;*/
+    outline: none;
+    border: solid 1px #555;
+    background-color: #eed;
+    box-shadow: 10px 10px  5px rgba(0,0,0,0.6);
+    -moz-box-shadow: 10px 10px  5px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 10px 10px  5px rgba(0,0,0,0.6);
+    -o-box-shadow: 10px 10px  5px rgba(0,0,0,0.6);
+    
+  }
+
+body{
+    font-size: 17px;
+  }
+
+#label{
+    font-family:serif;
+    font-size:23px;
+    width:13vmax;
+    color:rgb(19, 3, 3);
+    background-color: rgba(248, 224, 144, 0.938);
+  }
+
+.studBorder{
+  /*border-style: groove;
+  border-color:pink;
+  border-width: 25px;
+  background-color: #d1e7f4;*/
+
+  padding: 0px 6px 6px 0px;
+  /* #d1e7f4 background-color:pink;  */
+  background-color:grey;
+  border-top-style:ridge;
+ 
+  border-style:outset;
+  border-top-width: 20px;
+  border-bottom-width: 20px;
+  border-right-width: 30px;
+  border-left-width: 30px;
+
+  border-top-color: rgb(16, 180, 180);
+  border-bottom-color: aqua;
+  border-left-color: rgb(212, 123, 20);
+  border-right-color: rgb(212, 123, 20);
+  /*position: absolute;*/
+    
+  }
+
+.custom {
+    width: 300px;
+    border-radius: 80px;
+    border-style: ridge;
+}
+
+table,td{
+  border-collapse: collapse;
+  /*margin: 0 auto;
+  border: 1px solid black;*/
+}
+  
+
+#stud_class{
+
+color: crimson;
+}

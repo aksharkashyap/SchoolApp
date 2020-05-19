@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/printStudent.css">
+
+        <link rel="stylesheet" href="../css/responsive.css">
+        <script src="../node_modules/sweetalert/dist/sweetalert.min.js"></script>
+
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="../js/printStud.js"></script>
+        <script src="../js/printStudDB.js"></script>
+</head>
+<body>
+
+ <table class="nestedTable"> 
+
+  <td>
+    <table class="nestedTable">
+        <td><label id="label" for="firstname">First Name:</label>
+          <td><label type="text" id="firstname"></label></td>
+          <td> <label id="label" for="lastname">Last Name:</label>  </td> 
+          <td > <label type="text" id="lastname"></label></td>
+     <tr>
+   <td><label id="label" for="mothername">Mother's Name:</label></td> 
+   <td><label type="text" id="mothername"></label></td>
+   <td><label id="label" for="fathername">Father's Name:</label></td> 
+   <td><label type="text" id="fathername"></label></td><br>
+  </tr>
+
+  <tr>  <!----Religion----------->
+    <td><label id="label" for="religion">Religion:</label></td>
+    <td><label type="text" id="religion"></label></td>
+        <!------DOB--------->
+    <td><label id="label" for="dob">DOB:</label></td>
+    <td><label type="text" id="dob"></label><br></td>
+  </tr>
+
+  <tr> <!------Acadmic Year--------->
+    <td><label id="label" for="acad_year">Academic Year:</label></td> 
+    <td><label type="text" id="acad_year"></label></td>
+  
+    <!------Admission date--------->
+    <td><label id="label" for="admsn_date">Admission Date:</label></td>
+    <td><label type="text" id="admsn_date"></label><br></td>
+  </tr> 
+ 
+  <tr> <!------Admission Number--------->
+    <td><label id="label" for="admsn_num">Admission Number:</label></td>
+    <td><label type="text" id="admsn_num"></label></td>
+
+       <!----Class----------->
+    <td><label id="label" for="stud_class">Class:</label></td>
+    <td><label type="text" id="stud_class" name="stud_class"></label></td>
+       <br></td>
+       
+</tr>  
+
+  <tr> <!----Address----------->
+    <td><label id="label"  for="address">Address:</label></td>
+    <td><label type="text" id="address" ></label></td>
+  
+      <!----Mobile Number----------->
+
+    <td><label id="label" for="mob">Mobile Number:</label></td>
+    <td><label type="number" id="mob"></label><br></td>
+  </tr>
+  <tr> <!----Adhar Number----------->
+    <td><label id="label" for="adhar">Adhar Number:</label></td>  
+    <td><label type="number" id="adhar"></label></td>
+ 
+ <!----Bank Account Number------>
+    <td><label id="label" for="bank_acc">Bank Acc. Number:</label></td>
+    <td><label type="number" id="bank_acc"></label><br></td>
+  </tr> 
+  <tr><!---Bank Branch---------->
+    <td><label id="label" for="bank_branch">Bank Branch:</label></td>
+    <td><label type="text" id="bank_branch"></label></td>
+
+    <!--Group-->
+    <td><label id="label"  for="group">Group:</label></td>
+    <!--<td colspan="5">
+    <div style = "font-size: 16px">
+    <input type="radio" id="grp_none" name="group" value="NONE"> None
+    <input type="radio" id="grp_maths" name="group" value="MATHS"> Maths
+    <input type="radio" id="grp_bio" name="group" value="BIOLOGY"> Biology
+    <input type="radio" id="grp_humanities" name="group" value="HUMANITIES"> Humanities</div>
+   </td>-->
+   <td><label type="text" id="group"></label></td>
+
+   <tr>
+    <!--Gender-->
+  <td><label id="label" for="gender">Gender:</label> </td>
+  <!--<td><div style = "font-size: 16px">
+  <input type="radio" id="gndr_male" name="gender" value="MALE"> Male &NonBreakingSpace;
+  <input type="radio" id="gndr_female" name="gender" value="FEMALE"> Female</div>
+  </td>-->
+  <td><label type="text" id="gender"></label></td>
+
+    <!--Type-->
+  <td><label id="label" for="type">Type:</label> </td>
+  <!--<td colspan="5"><div style = "font-size: 16px">
+  <input type="radio" id="typ_none" name="type" value="NONE"> None
+  <input type="radio" id="typ_maths" name="type" value="REGULAR"> Regular
+  <input type="radio" id="typ_divimp" name="type" value="DIVISION IMPROVEMENT"> Division Improvement</div>
+  </td>-->
+  <td><label type="text" id="type"></label></td>
+  </tr> 
+  <tr>
+    <!--Category-->
+  <td><label id="label" for="category">Category:</label> </td> 
+  <!--<td><div style = "font-size: 16px">
+    <input type="radio" id="cat_gen" name="category" value="GEN"> Gen&nbsp;&nbsp;&nbsp;
+    <input type="radio" id="cat_obc" name="category" value="OBC"> OBC&nbsp;&nbsp;&nbsp;
+    <input type="radio" id="cat_sc" name="category" value="SC"> SC&nbsp;&nbsp;&nbsp;
+    <input type="radio" id="cat_st" name="category" value="ST"> ST <br></div>
+  </td>  -->
+  <td><label type="text" id="category"></label></td>
+  </tr>
+    </table>
+  </td>
+
+  <td>
+    <table class="nestedTable">
+ <!--Image Preview-->
+ <td style="color:blue;"><img id="imgID" style="display:none" width="115px" height="140px" alt="Photo Preview"/><br></td>
+ <!--------------->
+    </table>
+  </td>
+
+</table>
+
+<!--Back-->
+<button type="button"  onclick = "window.location.href='student.html'">Back</button>
+<!--Entry-->
+<input  id="id_ent" placeholder="Enter ID"/>
+<button id = "show_butn"type="button"  onclick = showStud()>Show</button>
+<!--Print-->
+<button id = "printButt" type="button" style="visibility:hidden" onclick = "window.print(); return false;">Print</button>

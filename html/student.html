@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>BHSSN - STUDENT</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+        <link rel="stylesheet" href="../css/studentStyle.css">
+        <link rel="stylesheet" href="../css/responsive.css">
+        <link rel="stylesheet" href="../css/clock.css">  
+        <script src="../js/clock.js"></script>
+        <script src="../js/date.js"></script>
+    </head>
+    
+
+  <body onload="startTime()">
+   <!--School logo,date,clock-->
+   <img src="../images/schoolTitle.png" class="responsive"/>
+   <img width="80px" height="90px" src="../images/schoolLogo.png" class="responsiveLogo"/>  
+   <div style="display:inline; color:#993300; font-size:30px;" class="responsivetxt">
+          <script language="JavaScript" type="text/javascript">
+               document.write(TODAY);
+           </script></div>
+    <div class="clockCss"id="txt"></div>    
+   <!----------------------------->
+        
+    <!--NavBar & Logo-->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="../index.html">HOME</a> 
+        <!-- Links -->
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#">STUDENT</a></li>
+          <li class="nav-item"></li><a class="nav-link" href="./teacher.html">TEACHER</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">ACCOUNTS</a></li>
+        </ul>
+    </nav>
+    <!------------------>
+        
+    <div class="container-fluid">
+        <button class="button" value="addStudent" onclick="window.location.href='./addStudent.html'">
+                    <span>Add <br>Student<img src= "../images/addstudent.png"/></span></button>    
+
+        <button class="button" value="delstudent" onclick="window.location.href='./deleteStudent.html'">
+                    <span>Delete<br>Student<img src= "../images/delstudent.png"/></span></button> 
+
+        <button class="button" value="updateStudent" onclick="window.location.href='./updateStudent.html'">
+                     <span>Update<br> Student<img src= "../images/updatestudent.png"/></span></button> 
+        
+        <button class="button" value="studentList" onclick="window.location.href='./displayStudent.html'">
+                    <span>Generate StudentList<img src= "../images/studentList.png"/></span></button>   
+
+        <button class="button" value="searchStudent" onclick="" >
+                <span>Search Student<img src= "../images/searchstudent.png"/></span></button>    
+        
+        <button class="button" value="printStudent" onclick = "window.location.href='./printStudent.html'">
+                <span>Print <br>Student<img src= "../images/printStudent.png"/></span></button>          
+        
+        <button class="button" value="updateClass" onclick="window.location.href='#'">
+                <span>Update<br> Class<img src= "../images/updateclass.png"/></span></button>  
+                    
+        <button class="button" value="iCard" onclick="">
+                <span>ID<br>Card<img src= "../images/idcardlogo.png"/></span></button>   
+                
+        <button class="button" value="classwiseReport" onclick="">
+                <span>Student<br>Count<img src= "../images/classwiseReport.png"/></span></button> 
+
+        
+    </div>
+
+  
+</html>

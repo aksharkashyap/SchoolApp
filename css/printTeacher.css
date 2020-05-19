@@ -1,0 +1,22 @@
+tr,td,table{
+    border: 1px solid;
+    padding: 14px;
+    
+}
+
+
+.conta{
+    font-size: 15px;
+}
+label[type=text],label[type=number],select{
+    font-size: 15px;
+}
+input[type=radio]{
+    font-size: 15px;
+}
+
+
+.nestedTable{
+    border-collapse: collapse;
+}
+

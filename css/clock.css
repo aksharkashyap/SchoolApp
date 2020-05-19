@@ -1,0 +1,16 @@
+.clockCss {
+    display:inline;
+    font-size: 32px;
+    border: 3px;
+    border-width: 10px;
+    border-style: groove;
+    border-radius: 5px;
+    border-right-width: 100px;
+    /*align to the top right corner
+    position: absolute;*/
+    top: 8px;
+    right: 16px;
+
+
+    
+  }
